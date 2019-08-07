@@ -1,0 +1,67 @@
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+html { font-family: 'Inter var', sans-serif; }
+}
+@media (prefers-color-scheme: dark) {
+	:root {
+        background: #292a2f;
+        color: #fff;
+	}
+}
+#wrap {
+    width: 700px;
+    margin: 0 auto;
+}
+#avatar {
+    border-radius: 100%;
+    height: 20%;
+    width: 20%;
+    float: left;
+    margin: 25px;
+    margin-top: 0; 
+}
+#name {
+    font-weight: bold;
+    font-size: 38px;
+    margin-top: 60px;
+}
+#bio, #links {
+    font-size: 20px;
+    margin: 10px;
+}
+a, a:visited {
+    text-decoration: none;
+    position: relative;
+  }
+#telegram {
+    color: #0088cc;
+}
+#telegram:after {
+    background: #0088cc;
+}
+#tgchan {
+    color: #5dc390;
+}
+#tgchan:after {
+    background: #5dc390;
+}
+#mail {
+    color: #d44638;
+}
+#mail:after {
+    background: #d44638;
+}
+/* link underline animation */
+a:after, a:visited:after {
+    content: '';
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    transition: 0.2s;
+  }
+  a:hover:after, a:visited:hover:after {
+    width: 100%;
+  }
