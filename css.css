@@ -13,27 +13,34 @@ html { font-family: 'Inter var', sans-serif; }
     width: 700px;
     margin: 0 auto;
 }
-#avatar {
+img /* avatar properties */ {
     border-radius: 100%;
     height: 20%;
     width: 20%;
-    float: left;
-    margin: 25px;
-    margin-top: 0; 
+		margin-top: 0;
+		margin: 25px;
 }
-#name {
+
+div:nth-child(2) /* name */ {
     font-weight: bold;
     font-size: 38px;
-    margin-top: 60px;
+		margin-left: 10px;
 }
-#bio, #links, #money {
+
+div:nth-child(3), div:nth-child(4), li /* other text */ {
     font-size: 20px;
     margin: 10px;
 }
-a, a:visited {
+
+a, a:visited /* remove link decorations */ {
     text-decoration: none;
     position: relative;
-  }
+}
+
+ul /* remove list bullets, padding */ {
+		list-style: none;
+		padding: 0;
+}
 #telegram {
     color: #0088cc;
 }
@@ -46,17 +53,29 @@ a, a:visited {
 #tgchan:after {
     background: #5dc390;
 }
+#vk {
+	color: #4d7198
+}
+#vk::after {
+	background: #4d7198
+}
 #mail {
     color: #d44638;
 }
 #mail:after {
     background: #d44638;
 }
-#rocket {
-	color:#FF6600;
+#donate {
+	color: #ff6600
 }
-#rocket:after {
-	background:#FF6600;
+#donate::after {
+	background: #ff6600
+}
+#tinkoff {
+	color:#ffdd56;
+}
+#tinkoff:after {
+	background:#ffdd56;
 }
 #qiwi {
 	color:#FF8C00;
@@ -65,10 +84,10 @@ a, a:visited {
 	background:#FF8C00;
 }
 #yandex {
-	color: #fc0;
+	color: #eb3323;
 }
 #yandex:after {
-	background: #fc0;
+	background: #eb3323;
 }
 /* link underline animation */
 a:after, a:visited:after {
