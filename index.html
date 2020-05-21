@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,15 +7,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <div id="wrap">
-            <img id="avatar" src="avatar.jpg">
-            <div id="name">Roman Gershunin</div>
-            <div id="bio">Web-monkey from Moscow, 17</div>
-            <div id="links">
-                <a id="telegram" href="tg://resolve?domain=gershik">Telegram</a> &#8226; 
-                <a id="tgchan" href="tg://resolve?domain=gershik_tyt">TG Channel</a> &#8226; 
-                <a id="mail" href="mailto://rgershunin@gmail.com">Email</a>
-            </div>
-        </div>
+      <div id="wrap">
+            <img src="avatar.jpg">
+            <div>Roman Gershunin</div>
+            <div>Linguist, somewhat of a coder from Moscow, 17</div>
+            <ul id="links">
+                <li><a href="tg://resolve?domain=gershik">Telegram</a></li>
+                <li><a href="tg://resolve?domain=gershik_tyt">TG Channel</a></li>
+                <li><a href="https://vk.com/gershik">VK</a></li>
+                <li><a href="mailto:rgershunin@gmail.com">Email</a></li>
+              </ul>
+                  <button type="button" onclick="document.getElementById('money').style.display='block'">Donate</button>
+                  <ul id="money" style="display:none">
+                      <li><a href="https://www.tinkoff.ru/sl/3aSu5WNc8DI">Tinkoff</a></li>
+                      <li><a href="https://qiwi.com/n/gershik">Qiwi</a></li>
+                      <li><a href="https://money.yandex.ru/to/410011406746376">Yandex</a></li>
+                </ul>
+      </div>
     </body>
 </html>

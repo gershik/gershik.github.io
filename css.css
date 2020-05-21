@@ -7,79 +7,108 @@ html { font-family: 'Inter var', sans-serif; }
 	:root {
         background: #292a2f;
         color: #fff;
-	}
+			}
 }
-#wrap {
-    width: 700px;
-    margin: 0 auto;
-}
-#avatar {
+img /* avatar properties */ {
     border-radius: 100%;
     height: 20%;
     width: 20%;
-    float: left;
-    margin: 25px;
-    margin-top: 0; 
+		margin-top: 0;
+		margin: 25px;
 }
-#name {
+
+div:nth-child(2) /* name */ {
     font-weight: bold;
     font-size: 38px;
-    margin-top: 60px;
+		margin-left: 10px;
 }
-#bio, #links, #money {
+
+div:nth-child(3), div:nth-child(4), li /* other text */ {
     font-size: 20px;
     margin: 10px;
 }
-a, a:visited {
+
+a, a:visited /* remove link decorations */ {
     text-decoration: none;
     position: relative;
-  }
-#telegram {
-    color: #0088cc;
 }
-#telegram:after {
-    background: #0088cc;
+
+ul /* remove list bullets, padding */ {
+		list-style: none;
+		padding: 0;
 }
-#tgchan {
-    color: #5dc390;
+details summary::-webkit-details-marker /* remove details arrow */ {
+  display:none;
 }
-#tgchan:after {
-    background: #5dc390;
+
+#money {
+	border: 0;
+	padding: 0;
+	margin: 0;
 }
-#mail {
-    color: #d44638;
-}
-#mail:after {
-    background: #d44638;
-}
-#rocket {
-	color:#FF6600;
-}
-#rocket:after {
-	background:#FF6600;
-}
-#qiwi {
-	color:#FF8C00;
-}
-#qiwi:after {
-	background:#FF8C00;
-}
-#yandex {
-	color: #fc0;
-}
-#yandex:after {
-	background: #fc0;
-}
+
 /* link underline animation */
-a:after, a:visited:after {
+a:after, a:visited:after, p:after {
     content: '';
-    height: 3px;
+    height: 2px;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 0%;
     transition: 0.2s;
-  }
-  a:hover:after, a:visited:hover:after {
+}
+  a:hover:after, a:visited:hover:after, p:hover:after {
     width: 100%;
-  }
+}
+/**/
+
+/* color govnocode */
+#links li:nth-child(1) a {
+    color: #0088cc;
+}
+#links li:nth-child(1) a:after {
+    background: #0088cc;
+}
+#links li:nth-child(2) a {
+    color: #5dc390;
+}
+#links li:nth-child(2) a:after {
+    background: #5dc390;
+}
+#links li:nth-child(3) a {
+	color: #4d7198;
+}
+#links li:nth-child(3) a:after {
+	background: #4d7198;
+}
+#links li:nth-child(4) a {
+    color: #d44638;
+}
+#links li:nth-child(4) a:after {
+    background: #d44638;
+}
+#links li:nth-child(5) {
+    color: #ff6600;
+}
+#links li:nth-child(5):after {
+    background: #ff6600;
+}
+#money li:nth-child(1) a {
+	color:#ffdd56;
+}
+#money li:nth-child(1) a:after {
+	background:#fbdd56;
+}
+#money li:nth-child(2) a {
+	color:#ff8c00;
+}
+#money li:nth-child(2) a:after {
+	background:#ff8c00;
+}
+#money li:nth-child(3) a {
+	color: #eb3323;
+}
+#money li:nth-child(3) a:after {
+	background: #eb3323;
+}
+/**/
