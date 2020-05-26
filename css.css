@@ -11,8 +11,8 @@ html { font-family: 'Inter var', sans-serif; }
 }
 img /* avatar properties */ {
     border-radius: 100%;
-    height: 20%;
-    width: 20%;
+    height: 15%;
+    width: 15%;
 		margin-top: 0;
 		margin: 25px;
 }
@@ -87,10 +87,10 @@ a:after, a:visited:after, p:after {
 #links li:nth-child(4) a:after {
     background: #d44638;
 }
-#links li:nth-child(5) {
+#links li:nth-child(5) a {
     color: #ff6600;
 }
-#links li:nth-child(5):after {
+#links li:nth-child(5) a:after {
     background: #ff6600;
 }
 #money li:nth-child(1) a {

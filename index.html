@@ -4,7 +4,7 @@
     <head>
         <title>gershik</title>
         <link href="css.css" rel="stylesheet" media="screen">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	      <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
       <div id="wrap">
@@ -16,13 +16,23 @@
                 <li><a href="tg://resolve?domain=gershik_tyt">TG Channel</a></li>
                 <li><a href="https://vk.com/gershik">VK</a></li>
                 <li><a href="mailto:rgershunin@gmail.com">Email</a></li>
-              </ul>
-                  <button type="button" onclick="document.getElementById('money').style.display='block'">Donate</button>
+                <li><a href="javascript:openSpoiler();">Donate</a></li>
                   <ul id="money" style="display:none">
                       <li><a href="https://www.tinkoff.ru/sl/3aSu5WNc8DI">Tinkoff</a></li>
                       <li><a href="https://qiwi.com/n/gershik">Qiwi</a></li>
                       <li><a href="https://money.yandex.ru/to/410011406746376">Yandex</a></li>
                 </ul>
+              </ul>
+              <script>
+              function openSpoiler() {
+                  document.querySelector("#links > ul").style.display = "block";
+                  document.querySelector("#links > li:nth-child(5) > a").href = "javascript:closeSpoiler()";
+              };
+              function closeSpoiler() {
+                  document.querySelector("#links > ul").style.display = "none";
+                  document.querySelector("#links > li:nth-child(5) > a").href = "javascript:openSpoiler()";
+              };
+              </script>
       </div>
     </body>
 </html>
