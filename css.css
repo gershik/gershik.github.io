@@ -23,8 +23,13 @@ div:nth-child(2) /* name */ {
 		margin-left: 10px;
 }
 
-div:nth-child(3), div:nth-child(4), li /* other text */ {
+div:nth-child(3) /* bio */ {
     font-size: 20px;
+    margin: 10px;
+}
+
+li /*links*/ {
+    font-size: 30px;
     margin: 10px;
 }
 
@@ -37,25 +42,22 @@ ul /* remove list bullets, padding */ {
 		list-style: none;
 		padding: 0;
 }
-details summary::-webkit-details-marker /* remove details arrow */ {
-  display:none;
-}
 
-#money {
-	border: 0;
-	padding: 0;
-	margin: 0;
+#money /*spoiler animation?*/ {
+	/* transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.26s ease; */
+	display: none;
 }
-
 /* link underline animation */
 a:after, a:visited:after, p:after {
     content: '';
-    height: 2px;
+    height: 3px;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 0%;
-    transition: 0.2s;
+    transition: 0.3s;
 }
   a:hover:after, a:visited:hover:after, p:hover:after {
     width: 100%;

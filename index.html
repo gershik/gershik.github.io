@@ -5,6 +5,23 @@
         <title>gershik</title>
         <link href="css.css" rel="stylesheet" media="screen">
 	      <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/774c408d8c.js" crossorigin="anonymous"></script>
+        <script>
+        function openSpoiler() {
+            // document.querySelector("#links > ul").style.max-height = "300px";
+            // document.querySelector("#links > ul").style.overflow = "visible";
+            // document.querySelector("#links > ul").style.transition = "max-height 0.25s ease-in";
+            document.querySelector("#links > ul").style.display = "block";
+            document.querySelector("#links > li:nth-child(5) > a").href = "javascript:closeSpoiler()";
+        };
+        function closeSpoiler() {
+            // document.querySelector("#links > ul").style.max-height = "0";
+            // document.querySelector("#links > ul").style.overflow = "hidden";
+            // document.querySelector("#links > ul").style.transition = "max-height 0.15s ease-out";
+            document.querySelector("#links > ul").style.display = "none";
+            document.querySelector("#links > li:nth-child(5) > a").href = "javascript:openSpoiler()";
+        };
+        </script>
     </head>
     <body>
       <div id="wrap">
@@ -12,27 +29,17 @@
             <div>Roman Gershunin</div>
             <div>Linguist, somewhat of a coder from Moscow, 17</div>
             <ul id="links">
-                <li><a href="tg://resolve?domain=gershik">Telegram</a></li>
-                <li><a href="tg://resolve?domain=gershik_tyt">TG Channel</a></li>
-                <li><a href="https://vk.com/gershik">VK</a></li>
-                <li><a href="mailto:rgershunin@gmail.com">Email</a></li>
-                <li><a href="javascript:openSpoiler();">Donate</a></li>
-                  <ul id="money" style="display:none">
-                      <li><a href="https://www.tinkoff.ru/sl/3aSu5WNc8DI">Tinkoff</a></li>
-                      <li><a href="https://qiwi.com/n/gershik">Qiwi</a></li>
-                      <li><a href="https://money.yandex.ru/to/410011406746376">Yandex</a></li>
+                <li><a href="tg://resolve?domain=gershik"><i class="fab fa-telegram-plane fa-fw"></i> Telegram</a></li>
+                <li><a href="tg://resolve?domain=gershik_tyt"><i class="fab fa-telegram fa-fw"></i> TG Channel</a></li>
+                <li><a href="https://vk.com/gershik"><i class="fab fa-vk fa-fw"></i> VK</a></li>
+                <li><a href="mailto:rgershunin@gmail.com"><i class="fas fa-envelope fa-fw"></i> Email</a></li>
+                <li><a href="javascript:openSpoiler();"><i class="fas fa-donate fa-fw"></i> Donate</a></li>
+                  <ul id="money">
+                      <li><a href="https://www.tinkoff.ru/sl/3aSu5WNc8DI"><i class="fas fa-piggy-bank fa-fw"></i> Tinkoff</a></li>
+                      <li><a href="https://qiwi.com/n/gershik"><i class="fas fa-kiwi-bird fa-fw"></i> Qiwi</a></li>
+                      <li><a href="https://money.yandex.ru/to/410011406746376"><i class="fab fa-yandex fa-fw"></i> Yandex</a></li>
                 </ul>
               </ul>
-              <script>
-              function openSpoiler() {
-                  document.querySelector("#links > ul").style.display = "block";
-                  document.querySelector("#links > li:nth-child(5) > a").href = "javascript:closeSpoiler()";
-              };
-              function closeSpoiler() {
-                  document.querySelector("#links > ul").style.display = "none";
-                  document.querySelector("#links > li:nth-child(5) > a").href = "javascript:openSpoiler()";
-              };
-              </script>
       </div>
     </body>
 </html>
