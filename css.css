@@ -11,19 +11,24 @@ html { font-family: 'Inter var', sans-serif; }
 }
 img /* avatar properties */ {
     border-radius: 100%;
-    height: 15%;
-    width: 15%;
+    height: 109px;
+    width: 109px;
 		margin-top: 0;
-		margin: 25px;
+		margin: 10px;
+		float: left;
 }
 
-div:nth-child(2) /* name */ {
+#wrap {
+	display: flex;
+}
+
+div > div:nth-child(1) /* name */ {
     font-weight: bold;
     font-size: 38px;
 		margin-left: 10px;
 }
 
-div:nth-child(3) /* bio */ {
+div > div:nth-child(2), div > div:nth-child(3) /* bio */ {
     font-size: 20px;
     margin: 10px;
 }
@@ -44,11 +49,16 @@ ul /* remove list bullets, padding */ {
 }
 
 #money /*spoiler animation?*/ {
-	/* transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 0.26s ease; */
-	display: none;
+    transition: opacity 0.3s linear;
+    -webkit-transition: opacity 0.3s linear;
+    -moz-transition: opacity 0.3s linear;
+    -o-transition: opacity 0.3s linear;
+    -ms-transition: opacity 0.3s linear;
+		height: 0;
+		overflow: hidden;
+		opacity: 0;
 }
+
 /* link underline animation */
 a:after, a:visited:after, p:after {
     content: '';

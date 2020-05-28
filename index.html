@@ -7,25 +7,35 @@
 	      <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://kit.fontawesome.com/774c408d8c.js" crossorigin="anonymous"></script>
         <script>
+        var opened = false;
+        function transitionend() {
+          document.querySelector("#links > ul").style.height = "0";
+          document.querySelector("#links > ul").style.overflow = "hidden";
+          opened = false;
+          document.querySelector("#links > ul").removeEventListener("transitionend", transitionend, true);
+        }
         function openSpoiler() {
-            // document.querySelector("#links > ul").style.max-height = "300px";
-            // document.querySelector("#links > ul").style.overflow = "visible";
-            // document.querySelector("#links > ul").style.transition = "max-height 0.25s ease-in";
-            document.querySelector("#links > ul").style.display = "block";
-            document.querySelector("#links > li:nth-child(5) > a").href = "javascript:closeSpoiler()";
+            if (!opened) {
+                opened = true;
+                document.querySelector("#links > ul").style.opacity = "1";
+                document.querySelector("#links > ul").style.height = "auto";
+                document.querySelector("#links > ul").style.overflow = "visible";
+                document.querySelector("#links > li:nth-child(5) > a").href = "javascript:closeSpoiler()";
+            }
         };
         function closeSpoiler() {
-            // document.querySelector("#links > ul").style.max-height = "0";
-            // document.querySelector("#links > ul").style.overflow = "hidden";
-            // document.querySelector("#links > ul").style.transition = "max-height 0.15s ease-out";
-            document.querySelector("#links > ul").style.display = "none";
-            document.querySelector("#links > li:nth-child(5) > a").href = "javascript:openSpoiler()";
+            if (opened) {
+                document.querySelector("#links > ul").style.opacity = "0";
+                document.querySelector("#links > ul").addEventListener("transitionend", transitionend, true);
+                document.querySelector("#links > li:nth-child(5) > a").href = "javascript:openSpoiler()";
+            }
         };
         </script>
     </head>
     <body>
       <div id="wrap">
             <img src="avatar.jpg">
+            <div>
             <div>Roman Gershunin</div>
             <div>Linguist, somewhat of a coder from Moscow, 17</div>
             <ul id="links">
@@ -40,6 +50,7 @@
                       <li><a href="https://money.yandex.ru/to/410011406746376"><i class="fab fa-yandex fa-fw"></i> Yandex</a></li>
                 </ul>
               </ul>
+            </div>
       </div>
     </body>
 </html>
