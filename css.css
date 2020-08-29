@@ -94,15 +94,21 @@ a:after, a:visited:after, p:after {
 	background: #4d7198;
 }
 #links li:nth-child(4) a {
-    color: #d44638;
+	color: #e1306c;
 }
 #links li:nth-child(4) a:after {
-    background: #d44638;
+	background: #e1306c;
 }
 #links li:nth-child(5) a {
-    color: #ff6600;
+    color: #d44638;
 }
 #links li:nth-child(5) a:after {
+    background: #d44638;
+}
+#links li:nth-child(6) a {
+    color: #ff6600;
+}
+#links li:nth-child(6) a:after {
     background: #ff6600;
 }
 #money li:nth-child(1) a {
