@@ -3,12 +3,7 @@ html { font-family: 'Inter', sans-serif; }
 @supports (font-variation-settings: normal) {
 html { font-family: 'Inter var', sans-serif; }
 }
-@media (prefers-color-scheme: dark) {
-	:root {
-        background: #292a2f;
-        color: #fff;
-			}
-}
+
 img /* avatar properties */ {
     border-radius: 100%;
     height: 109px;
@@ -16,37 +11,37 @@ img /* avatar properties */ {
 		margin-top: 0;
 		margin: 10px;
 		float: left;
-}
+    }
 
 #wrap {
 	display: flex;
-}
+    }
 
 div > div:nth-child(1) /* name */ {
     font-weight: bold;
     font-size: 38px;
 		margin-left: 10px;
-}
+    }
 
 div > div:nth-child(2), div > div:nth-child(3) /* bio */ {
     font-size: 20px;
     margin: 10px;
-}
+    }
 
 li /*links*/ {
     font-size: 30px;
     margin: 10px;
-}
+    }
 
 a, a:visited /* remove link decorations */ {
     text-decoration: none;
     position: relative;
-}
+    }
 
 ul /* remove list bullets, padding */ {
 		list-style: none;
 		padding: 0;
-}
+    }
 
 #money /*spoiler animation?*/ {
     transition: opacity 0.3s linear;
@@ -57,7 +52,7 @@ ul /* remove list bullets, padding */ {
 		height: 0;
 		overflow: hidden;
 		opacity: 0;
-}
+    }
 
 /* link underline animation */
 a:after, a:visited:after, p:after {
@@ -68,65 +63,84 @@ a:after, a:visited:after, p:after {
     left: 0;
     width: 0%;
     transition: 0.3s;
-}
-  a:hover:after, a:visited:hover:after, p:hover:after {
+    }
+a:hover:after, a:visited:hover:after, p:hover:after {
     width: 100%;
-}
+    }
 /**/
 
 /* color govnocode */
-#links li:nth-child(1) a {
+#telegram a {
     color: #0088cc;
-}
-#links li:nth-child(1) a:after {
+    }
+#telegram a:after {
     background: #0088cc;
-}
-#links li:nth-child(2) a {
+    }
+#tgchan a {
     color: #5dc390;
-}
-#links li:nth-child(2) a:after {
+    }
+#tgchan a:after {
     background: #5dc390;
-}
-#links li:nth-child(3) a {
+    }
+#vk a {
 	color: #4d7198;
-}
-#links li:nth-child(3) a:after {
+    }
+#vk a:after {
 	background: #4d7198;
-}
-#links li:nth-child(4) a {
+    }
+#insta a {
 	color: #e1306c;
-}
-#links li:nth-child(4) a:after {
+    }
+#insta a:after {
 	background: #e1306c;
-}
-#links li:nth-child(5) a {
+    }
+#email a {
     color: #d44638;
-}
-#links li:nth-child(5) a:after {
+    }
+#email a:after {
     background: #d44638;
-}
-#links li:nth-child(6) a {
+    }
+#shikimori a {
+    color: #343434;
+    }
+#shikimori a:after {
+    background: #343434;
+    }
+#moneyspoiler a {
     color: #ff6600;
-}
-#links li:nth-child(6) a:after {
+    }
+#moneyspoiler a:after {
     background: #ff6600;
-}
+    }
 #money li:nth-child(1) a {
 	color:#ffdd56;
-}
+    } 
 #money li:nth-child(1) a:after {
 	background:#fbdd56;
-}
+    }
 #money li:nth-child(2) a {
 	color:#ff8c00;
-}
+    }
 #money li:nth-child(2) a:after {
 	background:#ff8c00;
-}
+    }
 #money li:nth-child(3) a {
-	color: #eb3323;
-}
+	color: #804cf4;
+    }
 #money li:nth-child(3) a:after {
-	background: #eb3323;
-}
+	background: #804cf4;
+    }
 /**/
+
+@media (prefers-color-scheme: dark) {
+	:root {
+        background: #292a2f;
+        color: #ffffff;
+            }
+            #shikimori > a {
+                color: #ffffff;
+                }
+            #shikimori > a:after {
+                background: #ffffff;
+                }
+}
