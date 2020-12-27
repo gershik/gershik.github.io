@@ -1,26 +1,46 @@
-let opened = false;
-function transitionend() {
-    document.querySelector("#links > ul").style.height = "0";
-    document.querySelector("#links > ul").style.overflow = "hidden";
-    opened = false;
-    document.querySelector("#links > ul").removeEventListener("transitionend", transitionend, true);
-};
-
-function openSpoiler() {
-    if (!opened) {
-        opened = true;
-        document.querySelector("#links > ul").style.opacity = "1";
-        document.querySelector("#links > ul").style.height = "auto";
-        document.querySelector("#links > ul").style.overflow = "visible";
-        document.querySelector("#links > li:nth-child(6) > a").href = "javascript:closeSpoiler()";
+let openedTelegram = false;
+let openedDonate = false;
+function openTelegram() {
+    if (!openedTelegram) {
+        openedTelegram = true;
+        document.querySelector("#telegram").style.opacity = "1";
+        document.querySelector("#telegram").style.height = "auto";
+        document.querySelector("#telegram").style.overflow = "visible";
+        document.querySelector("#telegramSpoiler > a").href = "javascript:closeTelegram()";
     }
 };
 
-function closeSpoiler() {
-    if (opened) {
-        document.querySelector("#links > ul").style.opacity = "0";
-        document.querySelector("#links > ul").addEventListener("transitionend", transitionend, true);
-        document.querySelector("#links > li:nth-child(6) > a").href = "javascript:openSpoiler()";
+function closeTelegram() {
+    if (openedTelegram) {
+        openedTelegram = false;
+        document.querySelector("#telegram").style.opacity = "0";
+        setTimeout(() => { 
+            document.querySelector("#telegram").style.height = "0";
+            document.querySelector("#telegram").style.overflow = "hidden"; 
+        }, 300);
+        document.querySelector("#telegramSpoiler > a").href = "javascript:openTelegram()";
+    }
+};
+
+function openDonate() {
+    if (!openedDonate) {
+        openedDonate = true;
+        document.querySelector("#donate").style.opacity = "1";
+        document.querySelector("#donate").style.height = "auto";
+        document.querySelector("#donate").style.overflow = "visible";
+        document.querySelector("#donateSpoiler > a").href = "javascript:closeDonate()";
+    }
+};
+
+function closeDonate() {
+    if (openedDonate) {
+        openedDonate = false;
+        document.querySelector("#donate").style.opacity = "0";
+        setTimeout(() => { 
+            document.querySelector("#donate").style.height = "0";
+            document.querySelector("#donate").style.overflow = "hidden";  
+        }, 300);
+        document.querySelector("#donateSpoiler > a").href = "javascript:openDonate()";
     }
 };
 
