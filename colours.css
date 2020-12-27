@@ -1,0 +1,72 @@
+li a:after {
+	background: currentColor
+}
+
+#telegramSpoiler a {
+	color: #0088cc;
+}
+
+#telegram li:nth-child(1) a {
+	color: #5dc390;
+}
+
+#telegram li:nth-child(2) a {
+	color: #c7493e;
+}
+
+#telegram li:nth-child(3) a {
+	color: #03c11b;
+}
+
+#telegram li:nth-child(4) a {
+	color: #e1b303;
+}
+
+#telegram li:nth-child(5) a {
+	color: #006add;
+}
+
+#vk a {
+	color: #4d7198;
+}
+
+#instagram a {
+	color: #e1306c;
+}
+
+#shikimori a {
+	color: #343434;
+}
+
+#email a {
+	color: #d44638;
+}
+
+#donateSpoiler a {
+	color: #ff6600;
+}
+
+#donate li:nth-child(1) a {
+	color: #ffdd56;
+}
+
+#donate li:nth-child(2) a {
+	color: #ff8c00;
+}
+
+#donate li:nth-child(3) a {
+	color: #804cf4;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		background: #1e1e1e;
+		color: #ffffff;
+	}
+	#shikimori a {
+		color: #ffffff;
+	}
+	#shikimori a:after {
+		background: #ffffff;
+	}
+}
