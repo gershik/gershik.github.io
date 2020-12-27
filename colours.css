@@ -6,23 +6,23 @@ li a:after {
 	color: #0088cc;
 }
 
-#telegram li:nth-child(1) a {
+#telegram li:nth-child(2) a {
 	color: #5dc390;
 }
 
-#telegram li:nth-child(2) a {
+#telegram li:nth-child(3) a {
 	color: #c7493e;
 }
 
-#telegram li:nth-child(3) a {
+#telegram li:nth-child(4) a {
 	color: #03c11b;
 }
 
-#telegram li:nth-child(4) a {
+#telegram li:nth-child(5) a {
 	color: #e1b303;
 }
 
-#telegram li:nth-child(5) a {
+#telegram li:nth-child(6) a {
 	color: #006add;
 }
 
@@ -34,7 +34,7 @@ li a:after {
 	color: #e1306c;
 }
 
-#shikimori a {
+#shikimori a, .backButton a { /*also colours the back button inside spoilers */
 	color: #343434;
 }
 
@@ -46,15 +46,15 @@ li a:after {
 	color: #ff6600;
 }
 
-#donate li:nth-child(1) a {
+#donate li:nth-child(2) a {
 	color: #ffdd56;
 }
 
-#donate li:nth-child(2) a {
+#donate li:nth-child(3) a {
 	color: #ff8c00;
 }
 
-#donate li:nth-child(3) a {
+#donate li:nth-child(4) a {
 	color: #804cf4;
 }
 
@@ -63,10 +63,7 @@ li a:after {
 		background: #1e1e1e;
 		color: #ffffff;
 	}
-	#shikimori a {
+	#shikimori a, .backButton a {
 		color: #ffffff;
-	}
-	#shikimori a:after {
-		background: #ffffff;
 	}
 }

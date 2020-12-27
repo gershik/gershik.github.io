@@ -2,6 +2,10 @@ html {
 	font-family: Helvetica, Arial, sans-serif
 }
 
+#donate, #telegram {
+    display: none;
+}
+
 img {
     /* avatar properties */
 	border-radius: 100%;
@@ -49,18 +53,13 @@ ul {
 	padding: 0;
 }
 
-ul ul li {
-    /* spoiler lists margin */
-	margin-left: 50px;
-}
-
 #telegramSpoiler {
 	margin-bottom: 0;
 }
 
-#donate,
+/* #donate,
 #telegram {
-    /* spoiler animation */
+    /* spoiler animation *
 	transition: opacity 0.3s linear;
 	-webkit-transition: opacity 0.3s linear;
 	-moz-transition: opacity 0.3s linear;
@@ -69,7 +68,8 @@ ul ul li {
 	height: 0;
 	overflow: hidden;
 	opacity: 0;
-}
+} */
+
 /* link underline animation */
 a:after,
 a:visited:after,
