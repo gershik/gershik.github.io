@@ -1,79 +1,12 @@
-// let openedTelegram = false;
-// let openedDonate = false;
-// let whichIsOpen = "none";
-
-// function openTelegram() {
-//     whichIsOpen = "#telegram";
-// }
-// function openDonate() {
-//     whichIsOpen = "#donate";
-// }
-
-// function openSpoiler(whichIsOpen) {
-//     if (whichIsOpen = "none") {
-//         whichIsOpen = arguments[0];
-//         console.log(whichIsOpen)
-//         document.querySelector(`$(arguments[0])`).style.opacity = "1";
-//         document.querySelector(`$(arguments[0])`).style.height = "auto";
-//         document.querySelector(`$(arguments[0])`).style.overflow = "visible";
-//         document.querySelector(`$(arguments[0])`+"Spoiler > a").href = "javascript:closeTelegram()";
-//     }
-// };
-
-
-// function openTelegram() {
-//     if (!openedTelegram) {
-//         openedTelegram = true;
-//         document.querySelector("#telegram").style.opacity = "1";
-//         document.querySelector("#telegram").style.height = "auto";
-//         document.querySelector("#telegram").style.overflow = "visible";
-//         document.querySelector("#telegramSpoiler > a").href = "javascript:closeTelegram()";
-//     }
-// };
-
-// function closeTelegram() {
-//     if (openedTelegram) {
-//         openedTelegram = false;
-//         document.querySelector("#telegram").style.opacity = "0";
-//         setTimeout(() => { 
-//             document.querySelector("#telegram").style.height = "0";
-//             document.querySelector("#telegram").style.overflow = "hidden"; 
-//         }, 300);
-//         document.querySelector("#telegramSpoiler > a").href = "javascript:openTelegram()";
-//     }
-// };
-
-// function openDonate() {
-//     if (!openedDonate) {
-//         openedDonate = true;
-//         document.querySelector("#donate").style.opacity = "1";
-//         document.querySelector("#donate").style.height = "auto";
-//         document.querySelector("#donate").style.overflow = "visible";
-//         document.querySelector("#donateSpoiler > a").href = "javascript:closeDonate()";
-//     }
-// };
-
-// function closeDonate() {
-//     if (openedDonate) {
-//         openedDonate = false;
-//         document.querySelector("#donate").style.opacity = "0";
-//         setTimeout(() => { 
-//             document.querySelector("#donate").style.height = "0";
-//             document.querySelector("#donate").style.overflow = "hidden";  
-//         }, 300);
-//         document.querySelector("#donateSpoiler > a").href = "javascript:openDonate()";
-//     }
-// };
 function openSpoiler(whichIsOpen) {
     document.querySelector("#links").style.display = "none";
     document.querySelector(whichIsOpen).style.display = "block";
-    console.log(whichIsOpen)
 }
 
 function goBack(whichIsOpen) {
     document.querySelector("#links").style.display = "block";
     document.querySelector(whichIsOpen).style.display = "none";
-    console.log(whichIsOpen)
+
 }
 
 (function() {
