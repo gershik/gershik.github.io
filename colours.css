@@ -34,7 +34,7 @@ li a:after {
 	color: #e1306c;
 }
 
-#shikimori a, .backButton a { /*also colours the back button inside spoilers */
+#shikimori a, .backButton a {
 	color: #343434;
 }
 
