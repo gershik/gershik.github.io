@@ -15,26 +15,31 @@ li a:after {
 }
 
 #telegram li:nth-child(4) a {
-	color: #03c11b;
+	color: #8774e1;
 }
 
 #telegram li:nth-child(5) a {
-	color: #e1b303;
+	color: #03c11b;
 }
 
 #telegram li:nth-child(6) a {
+	color: #e1b303;
+}
+
+#telegram li:nth-child(7) a {
 	color: #006add;
 }
 
 #vk a {
 	color: #4d7198;
+	/* color: #2787f5 */
 }
 
 #instagram a {
 	color: #e1306c;
 }
 
-#shikimori a, .backButton a {
+#shikimori a, #github a, .backButton a {
 	color: #343434;
 }
 
@@ -63,7 +68,10 @@ li a:after {
 		background: #1e1e1e;
 		color: #ffffff;
 	}
-	#shikimori a, .backButton a {
+	#vk a {
+		color: #2787f5
+	}
+	#shikimori a, #github a, .backButton a {
 		color: #ffffff;
 	}
 }
