@@ -39,6 +39,9 @@ li a:after {
 	color: #e1306c;
 }
 
+#keyboardlayout a {
+	color: #3391ff;
+}
 #shikimori a, #github a, .backButton a {
 	color: #343434;
 }
