@@ -10,6 +10,13 @@ li a:after {
 	color: #5dc390;
 }
 
+#telegram li:nth-child(3) a {
+	color: #c7493e;
+}
+
+#telegram li:nth-child(4) a {
+	color: #8774e1;
+}
 
 #telegram li:nth-child(5) a {
 	color: #03c11b;
