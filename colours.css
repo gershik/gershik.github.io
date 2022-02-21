@@ -4,74 +4,92 @@ li a:after {
 
 #telegramSpoiler a {
 	color: #0088cc;
+	fill: #0088cc;
 }
 
 #telegram li:nth-child(2) a {
 	color: #5dc390;
+	fill: #5dc390;
 }
 
 #telegram li:nth-child(3) a {
 	color: #c7493e;
+	fill: #c7493e;
 }
 
 #telegram li:nth-child(4) a {
 	color: #8774e1;
+	fill: #8774e1;
 }
 
 #telegram li:nth-child(5) a {
 	color: #f6c755;
+	fill: #f6c755;
 }
 
 #telegram li:nth-child(6) a {
 	color: #03c11b;
+	fill: #03c11b;
 }
 
 #telegram li:nth-child(7) a {
 	color: #e1b303;
+	fill: #e1b303;
 }
 
 #telegram li:nth-child(8) a {
 	color: #006add;
+	fill: #006add;
 }
 
 #telegram li:nth-child(9) a {
 	color: #ffa31a;
+	fill: #ffa31a;
 }
 
 #vk a {
 	color: #4d7198;
+	fill: #4d7198;
 	/* color: #2787f5 */
 }
 
 #instagram a {
 	color: #e1306c;
+	fill: #e1306c;
 }
 
 #keyboardlayout a {
 	color: #3391ff;
+	fill: #3391ff;
 }
 #shikimori a, #github a, .backButton a {
 	color: #343434;
+	fill: #343434;
 }
 
 #email a {
 	color: #d44638;
+	fill: #d44638;
 }
 
 #donateSpoiler a {
 	color: #ff6600;
+	fill: #ff6600;
 }
 
 #donate li:nth-child(2) a {
 	color: #ffdd56;
+	fill: #ffdd56;
 }
 
 #donate li:nth-child(3) a {
 	color: #ff8c00;
+	fill: #ff8c00;
 }
 
 #donate li:nth-child(4) a {
 	color: #804cf4;
+	fill: #804cf4;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -80,9 +98,11 @@ li a:after {
 		color: #ffffff;
 	}
 	#vk a {
-		color: #2787f5
+		color: #2787f5;
+		fill: #2787f5;
 	}
 	#shikimori a, #github a, .backButton a {
 		color: #ffffff;
+		fill: #ffffff;
 	}
 }

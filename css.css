@@ -58,6 +58,15 @@ li {
 	font-size: 30px;
 }
 
+svg {
+	height: 30px;
+	width: 1.25em;
+	padding: 0;
+	border-radius: 0!important;
+	display: inline-block;
+	vertical-align: -3px;
+}
+
 a,
 a:visited {
     /* remove link decorations */
