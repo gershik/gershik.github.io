@@ -1,93 +1,74 @@
-@media screen and (max-width: 551px) {
-	img {
-		float: right;
-	}
-	br {
-		display: inline;
-	}
-	div div:nth-child(2) {
-		margin-right: 0!important;
-	}
-	div div:nth-child(1) {
-		margin-left: 10px;
-	}
-} 
-@media screen and (min-width: 552px) {
-	img {
-		float: left;
-		margin-right: 15px!important;
-	}
-	br {
-		display: none;
-	}
-} 
-
-html {
-	font-family: Helvetica, Arial, sans-serif
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	line-height: 1.3;
+	max-width: 30rem;
+	margin: 0 auto;
+	padding: 0.5rem 1.5rem;
 }
 
-#donate, #telegram {
-    display: none;
-}
-
-img {
+.avatar {
 	border-radius: 100%;
-	height: 68px;
-	width: 68px;
-	margin-top: 0;
-	margin: 10px;
+	height: 5rem;
+	width: 5rem;
+	margin-left: 1rem;
 }
 
-#wrap {
-	display: block;
-	max-width: 547px;
+header {
+	display: flex;
+	margin: 2rem 0 1.5rem;
 }
 
-div div:nth-child(1) {
+header div {
+	flex: 1;
+}
+
+header h1 {
 	font-weight: bold;
-	font-size: 38px;
+	font-size: 2rem;
+	margin: 0;
+	margin: 0 0 0.25rem 0;
 }
 
-div div:nth-child(2) {
-	font-size: 20px;
-	margin: 10px;
+header p {
+	margin: 0;
+}
+
+header::after {
+	content: '';
+	display: block;
+	clear: both;
 }
 
 li {
-	margin: 10px;
-	font-size: 30px;
+	font-size: 1.5rem;
+	margin-bottom: 0.75rem;
 }
 
-svg {
-	height: 30px;
-	width: 1.25em;
-	padding: 0;
-	border-radius: 0!important;
+li svg,
+li .icon {
 	display: inline-block;
-	vertical-align: -3px;
+	width: 1em;
+	height: 1em;
+	vertical-align: -0.15em;
+	margin-right: 0.5rem;
+	fill: currentColor;
 }
 
 a,
 a:visited {
-    /* remove link decorations */
+	/* remove link decorations */
 	text-decoration: none;
 	position: relative;
 }
 
 ul {
-    /* remove list bullets, padding */
+	/* remove list bullets, padding */
 	list-style: none;
 	padding: 0;
 }
 
-#telegramSpoiler {
-	margin-bottom: 0;
-}
-
 /* link underline animation */
-a:after,
-a:visited:after,
-p:after {
+a:after {
 	content: '';
 	height: 3px;
 	position: absolute;
@@ -95,11 +76,84 @@ p:after {
 	left: 0;
 	width: 0%;
 	transition: 0.3s;
+	background: currentColor;
 }
 
-a:hover:after,
-a:visited:hover:after,
-p:hover:after {
-    width: 100%;
+a:hover:after {
+	width: 100%;
 }
-/**/
+
+@media screen and (min-width: 600px) {
+	html {
+		font-size: 125%;
+	}
+
+	header {
+		flex-flow: row-reverse;
+		align-items: center;
+	}
+
+	.avatar {
+		margin-left: 0;
+		margin-right: 1rem;
+	}
+
+	li {
+		padding-left: 3rem;
+	}
+
+	li svg,
+	li .icon {
+		margin-right: 1rem;
+	}
+}
+
+.six-four {
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+	font-weight: bold;
+	perspective: 2rem;
+}
+
+.six-four-wrap {
+	transform-style: preserve-3d;
+	transform: translate3d(0, -0.1em, -0.4em) rotate3d(0, 1, 0, 0);
+	transition: 0.4s transform;
+}
+
+a:hover .six-four-wrap {
+	transform: translate3d(0, -0.1em, -0.4em) rotate3d(0, 1, 0, 90deg);
+}
+
+.six {
+	position: absolute;
+	top: 0;
+	left: 0.1em;
+	width: 0.8em;
+	height: 1em;
+	transform: translate3d(0, 0, 0.4em);
+	backface-visibility: hidden;
+}
+
+.four {
+	position: absolute;
+	top: 0;
+	left: 0.1em;
+	width: 0.8em;
+	height: 1em;
+	transform: translate3d(-0.4em, 0, 0) rotate3d(0, 1, 0, -90deg);
+	backface-visibility: hidden;
+}
+
+#telegram li:nth-child(8) a svg:nth-child(2) {
+	display:none;
+}
+
+#telegram li:nth-child(8) a:hover svg:nth-child(2) {
+	display:inline-block;
+}
+
+#telegram li:nth-child(8) a:hover svg:nth-child(1) {
+	display:none;
+}
