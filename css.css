@@ -58,7 +58,6 @@ a,
 a:visited {
 	/* remove link decorations */
 	text-decoration: none;
-	position: relative;
 }
 
 ul {
@@ -68,7 +67,10 @@ ul {
 }
 
 /* link underline animation */
-a:after {
+a span {
+	position: relative;
+}
+a span:after {
 	content: '';
 	height: 3px;
 	position: absolute;
@@ -79,7 +81,7 @@ a:after {
 	background: currentColor;
 }
 
-a:hover:after {
+a:hover span:after {
 	width: 100%;
 }
 
